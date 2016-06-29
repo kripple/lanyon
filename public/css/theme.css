@@ -1,54 +1,38 @@
-/*
- *                        ___
- *                       /\_ \
- *  _____     ___     ___\//\ \      __
- * /\ '__`\  / __`\  / __`\\ \ \   /'__`\
- * \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
- *  \ \ ,__/\ \____/\ \____//\____\ \____\
- *   \ \ \/  \/___/  \/___/ \/____/\/____/
- *    \ \_\
- *     \/_/
- *
- * Designed, built, and released under MIT license by @mdo. Learn more at
- * https://github.com/poole/poole.
- */
+/* ------------------------------------------------------------------------- */
+/* Designed, built, and released under MIT license by @mdo.                  */
 
+/* ------------------------------------------------------------------------- */
+/* Style contents:
 
-/*
- * Contents
- *
- * Body resets
- * Custom type
- * Messages
+ * Body resets 
  * Container
+ * Messages
  * Masthead
- * Posts and pages
- * Pagination
- * Reverse layout
- * Themes
+ * Posts & Pages
+ * Sidebar
+ * Color scheme
+
  */
 
-
-/*
- * Body resets
- *
- * Update the foundational and global aspects of the page.
- */
-
+/* ------------------------------------------------------------------------- */
+/* Body resets - Update the foundational and global aspects of the page.     */
+ 
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+/* Prevent scroll on narrow devices */
 html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -81,11 +65,13 @@ a:focus {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+	/*font-family: "PT Sans", Helvetica, Arial, sans-serif;*/
   margin-bottom: .5rem;
-  font-weight: bold;
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
+  font-weight: 400;
+  letter-spacing: -.025rem;
 }
 h1 {
   font-size: 2rem;
@@ -112,7 +98,6 @@ p {
 strong {
   color: #303030;
 }
-
 
 /* Lists */
 ul, ol, dl {
@@ -251,25 +236,30 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Container - Center the page content.                                      */
 
-/*
- * Custom type
- *
- * Extend paragraphs with `.lead` for larger introductory text.
- */
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+.container {
+  max-width: 28rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
+}
 
-/*
- * Messages
- *
- * Show alert messages to users. You may add it to single elements like a `<p>`,
- * or to a parent if there are multiple elements to show.
- */
+/* ------------------------------------------------------------------------- */
+/* Messages - Show alert messages to users. Works on parent elements too.    */
 
 .message {
   margin-bottom: 1rem;
@@ -278,55 +268,8 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
-
-/*
- * Container
- *
- * Center the page content.
- */
-
-.container {
-  max-width: 38rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
-  margin-left:  auto;
-  margin-right: auto;
-}
-
-
-/*
- * Masthead
- *
- * Super small header above the content for site name and short description.
- */
-
-.masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 3rem;
-}
-.masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #505050;
-}
-.masthead-title a {
-  color: #505050;
-}
-.masthead-title small {
-  font-size: 75%;
-  font-weight: 400;
-  color: #c0c0c0;
-  letter-spacing: 0;
-}
-
-
-/*
- * Posts and pages
- *
- * Each post is wrapped in `.post` and is used on default and post layouts. Each
- * page is wrapped in `.page` and is only used on the page layout.
- */
+/* ------------------------------------------------------------------------- */
+/* Posts & Pages - Post is used for default layouts.                         */
 
 .page,
 .post {
@@ -377,54 +320,14 @@ tbody tr:nth-child(odd) th {
   color: inherit;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Color scheme - Apply custom color scheme by adding class to `body`.       */
 
-/*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- */
-
-.pagination {
-  overflow: hidden; /* clearfix */
-  margin-left: -1rem;
-  margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #ccc;
-  text-align: center;
+.theme-base .container a,
+.theme-base .copywright a,
+.theme-base .related-posts li a:hover {
+  color: #cc0052; /* #67194e; #ac4142;*/
 }
 
-/* Pagination items can be `span`s or `a`s */
-.pagination-item {
-  display: block;
-  padding: 1rem;
-  border: 1px solid #eee;
-}
-.pagination-item:first-child {
-  margin-bottom: -1px;
-}
 
-/* Only provide a hover state for linked pagination items */
-a.pagination-item:hover {
-  background-color: #f5f5f5;
-}
 
-@media (min-width: 30em) {
-  .pagination {
-    margin: 3rem 0;
-  }
-  .pagination-item {
-    float: left;
-    width: 50%;
-  }
-  .pagination-item:first-child {
-    margin-bottom: 0;
-    border-top-left-radius:    4px;
-    border-bottom-left-radius: 4px;
-  }
-  .pagination-item:last-child {
-    margin-left: -1px;
-    border-top-right-radius:    4px;
-    border-bottom-right-radius: 4px;
-  }
-}

@@ -1,0 +1,103 @@
+/* ------------------------------------------------------------------------- */
+/* Style contents:
+
+ * Images
+ * Navbar
+ * Copywright
+
+ */
+
+/* ------------------------------------------------------------------------- */
+/* Images                                                                    */
+
+#headshot {
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #f8f8f2;
+  transform: rotate(25deg);
+  max-width: 10rem;
+  margin-left:  auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Navbar								                                                     */
+                                                                  
+.nav {
+	background: white; /*#f9f9f9;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+  border-bottom: 1px solid #f8f8f2;
+  transition: top 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.nav-item-left, .nav-item-right {
+	vertical-align: middle;
+  color: #292923;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+}
+
+.nav-item-left {
+  float: left;
+}
+
+.nav-item-right {
+  float: right;
+}
+
+@media (max-width: 400px) {
+  .nav-item-left, .nav-item-right {
+  	float: none;
+  	display: inline-block;
+  	width: 32%;
+  	margin: 0 auto;
+  	min-width: 106px;
+  }
+}
+
+.nav-item-left:hover, .nav-item-right:hover {
+  color: #cc0052;
+  text-decoration: none;
+}
+
+.nav-item-active {
+  background-color: #4CAF50;
+}
+
+.nav-up {
+  top: -5rem;
+}
+
+/* Position site content when the header is visible. */
+.wrap {
+  padding-top: 7rem;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Copywright                                                                */
+
+.copywright {
+	text-align: center;
+  width: 20rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+							                                               
+                                                                  
+
+
+
