@@ -12,8 +12,7 @@ tagline:              '@krippleffect'
 description:          'Kelly Ripple is a Software Engineer living and working in Northern Virginia. She currently works in Angular & Node with <a href="https://www.bti360.com/">BTI360</a>'
 url:                  http://lanyon.getpoole.com
 # url:                http://kellyripple.com
-baseurl:              ''
-# baseurl:            /
+baseurl:              /
 
 # About/contact
 author:

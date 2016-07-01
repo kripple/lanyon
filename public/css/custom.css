@@ -25,12 +25,11 @@
 /* Navbar								                                                     */
                                                                   
 .nav {
-	background: white; /*#f9f9f9;*/
+	background: white; 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
   height: 5rem;
   overflow: hidden;
   border-bottom: 1px solid #f8f8f2;
@@ -38,39 +37,74 @@
   white-space: nowrap;
 }
 
-.nav-item-left, .nav-item-right {
-	vertical-align: middle;
+.nav-item {
   color: #292923;
+  position: absolute;
+  height: 5rem;
+  top: 0;
+  bottom: 0;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  padding-left: 2rem;
   text-align: center;
-  padding: 1.5rem 2rem;
   text-decoration: none;
+  transition: 0.15s ease-in-out;
 }
 
 .nav-item-left {
-  float: left;
+  left: 0;
 }
 
 .nav-item-right {
-  float: right;
+  right: 0;
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+.nav-item-center {
+  left: 5.6rem;
 }
 
 @media (max-width: 400px) {
-  .nav-item-left, .nav-item-right {
-  	float: none;
-  	display: inline-block;
-  	width: 32%;
+  .nav {
+    display: table;
+    width: 100%;
+    min-width: 300px;
+  }
+
+  .nav-item {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 33%;
+    padding: 0;
   	margin: 0 auto;
-  	min-width: 106px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .nav-item-left {
+    padding: 0;
+  }
+
+  .nav-item-right {
+    padding: 0;
+  }
+
+  .nav-item-center {
+    padding: 0;
   }
 }
 
-.nav-item-left:hover, .nav-item-right:hover {
+.nav-item:hover, .nav-item-active { 
   color: #cc0052;
   text-decoration: none;
-}
+  border-bottom: 0.2rem solid #cc0052;
 
-.nav-item-active {
-  background-color: #4CAF50;
 }
 
 .nav-up {
