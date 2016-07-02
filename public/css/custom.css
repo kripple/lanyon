@@ -23,81 +23,70 @@
 
 /* ------------------------------------------------------------------------- */
 /* Navbar								                                                     */
-                                                                  
+
 .nav {
 	background: white; 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 5rem;
+  height: 3rem;
   overflow: hidden;
   border-bottom: 1px solid #f8f8f2;
   transition: top 0.5s ease-in-out;
   white-space: nowrap;
 }
 
+.nav-container {
+  max-width: 28rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+@media (min-width: 38em) {
+  .nav-container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .nav-container {
+    max-width: 38rem;
+  }
+}
+
 .nav-item {
   color: #292923;
-  position: absolute;
-  height: 5rem;
-  top: 0;
-  bottom: 0;
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
-  padding-left: 2rem;
+  position: relative;
+  height: 3rem;
+  margin: 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.2rem;
   text-align: center;
   text-decoration: none;
   transition: 0.15s ease-in-out;
 }
 
 .nav-item-left {
-  left: 0;
+  float: left;
   padding-right: 0.6rem;
 }
 
 .nav-item-right {
-  right: 0;
+  float: right;
   padding-left: 0.6rem;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .nav-item-center {
-  left: 6.2rem;
+  float: left;
   padding-right: 0.6rem;
 }
 
 @media (max-width: 400px) {
-  .nav {
-    display: table;
-    width: 100%;
-    min-width: 300px;
-  }
-
-  .nav-item {
-    top: auto;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-    width: 33%;
-    padding: 0;
-  	margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .nav-item-left {
-    padding: 0;
-  }
-
-  .nav-item-right {
-    padding: 0;
-  }
-
-  .nav-item-center {
+  .nav-container {
     padding: 0;
   }
 }
