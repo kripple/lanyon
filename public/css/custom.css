@@ -53,16 +53,18 @@
 
 .nav-item-left {
   left: 0;
+  padding-right: 0.6rem;
 }
 
 .nav-item-right {
   right: 0;
-  padding-left: 0;
+  padding-left: 0.6rem;
   padding-right: 2rem;
 }
 
 .nav-item-center {
-  left: 5.6rem;
+  left: 6.2rem;
+  padding-right: 0.6rem;
 }
 
 @media (max-width: 400px) {
