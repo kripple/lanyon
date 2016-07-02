@@ -1,29 +1,17 @@
 ---
-layout: page
-title: Kelly Ripple
+layout: default
 ---
 
-<span>Electrical Engineer &rarr; Web Developer.</span>
-
-<p>Kelly Ripple is a Software Engineer living and working in Northern Virginia. Originally from Maryland, she pursued her passion for technology by getting a degree in Electrical Engineering from <a href="http://www.umd.edu/" target="_blank">The University of Maryland</a>. After a few years in unfulfilling jobs she decided she wanted a career in web development, and attended <a href="http://devbootcamp.com/" target="_blank">Dev Bootcamp</a> in NYC to make that happen. She currently works on the front end in Angular.js at <a href="https://www.bti360.com/">BTI360</a>. Check out her current and past projects <a href="/projects">here</a>.</p>
-
-<p>
-  <a href="https://twitter.com/krippleffect" target="_blank">Twitter</a> 
-  &middot;
-  <a href="https://github.com/kripple" target="_blank">Github</a>
-  &middot;
-  <a href="https://www.linkedin.com/in/kellymripple" target="_blank">LinkedIn</a>
-  &middot;
-  <a href="/resume" target="_blank">Resume</a>
-</p>
-
-<img id="headshot" src="/public/imgs/headshot.png">
-
-
-
-INCLUDE CONTACT INFO !
-
-github@kripple
-twitter@krippleffect
-gmail@kelly.m.ripple
-resume@
+<ul>
+	{% for post in site.posts %}
+	  {% if post.category == 'Projects' %}
+	    {% continue %}
+	  {% endif %}
+	  
+  	<li style="list-style:none">
+  		<h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    	<span class="post-date">{{ post.date | date: "%B %-d, %Y" }} &middot; {{ post.content | number_of_words | plus:90 | divided_by:180 | append: " Minute Read" }} </span>
+    	<p>{{ post.blurb }}.. <a href="{{ post.url }}"">[Read more...]</a></p>
+    </li>
+	{% endfor %}
+</ul>
