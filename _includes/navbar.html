@@ -1,8 +1,11 @@
 <nav class="nav nav-down">
+	
+	<a class="nav-title {% if page.url == site.baseurl %} nav-title-active{% endif %}" href="{{ site.baseurl }}">{ {{site.title}} }</a>
+
 	<div class="nav-container">
-	  <a class="nav-item nav-item-left{% if page.url == '/blog' %} nav-item-active{% endif %}" href="{{ site.baseurl }}blog">Blog</a>
-	  <a class="nav-item nav-item-center{% if page.url == '/projects' %} nav-item-active{% endif %}" href="{{ site.baseurl }}projects">Projects</a>
-	  <a class="nav-item nav-item-right{% if page.url == '/about' %} nav-item-active{% endif %}" href="{{ site.baseurl }}about">About</a>
+	  <a class="nav-item nav-item-left{% if page.url == '/blog' %} nav-item-active{% endif %}" href="{{ site.baseurl }}blog">blog</a>
+	  <a class="nav-item nav-item-center{% if page.url == '/projects' %} nav-item-active{% endif %}" href="{{ site.baseurl }}projects">projects</a>
+	  <a class="nav-item nav-item-right{% if page.url == '/about' %} nav-item-active{% endif %}" href="{{ site.baseurl }}about">bio</a>
   </div>
 </nav>
 

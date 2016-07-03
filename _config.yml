@@ -2,30 +2,23 @@
 markdown:             redcarpet
 highlighter:          rouge
 
-# Permalinks
 permalink:            /:title
 relative_permalinks:  false
 
-# Setup
-title:                Another Dev Blog
-tagline:              '@krippleffect'
-description:          'Kelly Ripple is a Software Engineer living and working in Northern Virginia. She currently works in Angular & Node with <a href="https://www.bti360.com/">BTI360</a>'
-url:                  http://lanyon.getpoole.com
-# url:                http://kellyripple.com
+title:                kmr
+tagline:              Kelly Ripple
+url:                  http://kellyripple.com
 baseurl:              /
 
-# About/contact
 author:
-name:                 'Kelly Ripple'
-url:                  https://twitter.com/krippleffect
-email:                example@gmail.com
-
-# Custom vars
-version:              1.0.0
+  name:               'Kelly Ripple'
+  url:                https://twitter.com/krippleffect
+  email:              hello@kellyripple.com
 
 github:
-repo:                 https://github.com/kripple/kripple.github.io
+  repo:               https://github.com/kripple/kripple.github.io
 
 environment:          development
 
 exclude:              [node_modules,gulpfile.js,package.json,Gemfile,Rakefile]
+

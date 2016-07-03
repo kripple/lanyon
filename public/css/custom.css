@@ -4,6 +4,7 @@
  * Images
  * Navbar
  * Copywright
+ * Positioning
 
  */
 
@@ -13,12 +14,13 @@
 #headshot {
   overflow: hidden;
   border-radius: 50%;
-  background-color: #f8f8f2;
+  background-color: #515151;
   transform: rotate(25deg);
   max-width: 10rem;
   margin-left:  auto;
   margin-right: auto;
   margin-bottom: 0;
+  border: 0.2rem solid #515151;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -30,11 +32,12 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3rem;
-  overflow: hidden;
-  border-bottom: 1px solid #f8f8f2;
+  height: 5rem;
+  /*overflow: hidden;*/
+  border-bottom: 0.1rem solid #f8f8f2;
   transition: top 0.5s ease-in-out;
   white-space: nowrap;
+  border-top: 0.1rem solid #515151;
 }
 
 .nav-container {
@@ -56,13 +59,20 @@
   }
 }
 
+@media (max-width: 400px) {
+  .nav-container {
+    padding: 0;
+  }
+}
+
 .nav-item {
-  color: #292923;
+  color: #515151;
   position: relative;
-  height: 3rem;
+  height: 2.6rem;
   margin: 0;
   padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0;
+  border-bottom: 0.2rem solid transparent; 
   padding-left: 1.2rem;
   text-align: center;
   text-decoration: none;
@@ -85,21 +95,33 @@
   padding-right: 0.6rem;
 }
 
-@media (max-width: 400px) {
-  .nav-container {
-    padding: 0;
-  }
+.nav-title, .nav-title:hover {
+  font-family: 'Zeyada', cursive;
+  font-size: 2.5rem;
+  display: block;
+  color: #515151;
+  margin: 0 auto;
+  margin-bottom: -2rem;
+  text-align: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0;
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+  width: 11rem;
 }
 
 .nav-item:hover, .nav-item-active { 
   color: #cc0052;
   text-decoration: none;
   border-bottom: 0.2rem solid #cc0052;
-
 }
 
+.nav-title-active {
+  color: #cc0052;
+}
+ 
 .nav-up {
-  top: -5rem;
+  top: -5.1rem;
 }
 
 /* Position site content when the header is visible. */
@@ -121,8 +143,36 @@
   margin-right: auto;
 }
 
-					                                               
-                                                                  
+/* ------------------------------------------------------------------------- */
+/* ????????????                                                              */
+
+.social-media-block {
+  position: relative;
+  display: block;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #515151;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.social-media-block a {
+  text-decoration: none;
+}					                                               
+   
+.divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.1rem;
+  background-color: #f8f8f2;
+}     
+
+.spacer {
+  position: relative;
+  margin-bottom: 3rem;
+}                                                          
 
 
 
