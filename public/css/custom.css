@@ -27,13 +27,13 @@
 /* Navbar								                                                     */
 
 .nav {
+  z-index: 10;
 	background: white; 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 5rem;
-  /*overflow: hidden;*/
+  height: 8.4rem;
   border-bottom: 0.1rem solid #f8f8f2;
   transition: top 0.5s ease-in-out;
   white-space: nowrap;
@@ -41,58 +41,56 @@
 }
 
 .nav-container {
-  max-width: 28rem;
+  width: 20rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
   margin-right: auto;
 }
 
-@media (min-width: 38em) {
-  .nav-container {
-    max-width: 32rem;
-  }
-}
-@media (min-width: 56em) {
-  .nav-container {
-    max-width: 38rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .nav-container {
-    padding: 0;
-  }
-}
-
 .nav-item {
   color: #515151;
   position: relative;
-  height: 2.6rem;
+  height: 2.75rem;
   margin: 0;
-  padding-top: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0rem;
   padding-bottom: 0;
-  border-bottom: 0.2rem solid transparent; 
-  padding-left: 1.2rem;
+  border-bottom: 0.1rem solid transparent; 
   text-align: center;
   text-decoration: none;
   transition: 0.15s ease-in-out;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 6rem;
+  display: inline-block;
+  float: left;
+}
+
+@media (max-width: 330px) {
+  .nav-container {
+    width: 17rem;
+  }
+  .nav-item {
+    width: 5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
 }
 
 .nav-item-left {
-  float: left;
-  padding-right: 0.6rem;
 }
 
 .nav-item-right {
+  margin-right: -2000px;
+  left: -2000px;
   float: right;
-  padding-left: 0.6rem;
-  padding-right: 1rem;
 }
 
 .nav-item-center {
-  float: left;
-  padding-right: 0.6rem;
+  margin-left: -2000px;
+  left: 2000px;
 }
 
 .nav-title, .nav-title:hover {
@@ -101,19 +99,19 @@
   display: block;
   color: #515151;
   margin: 0 auto;
-  margin-bottom: -2rem;
   text-align: center;
-  padding-top: 0.6rem;
-  padding-bottom: 0;
+  padding-top: 1.2rem;
+  padding-bottom: 0.6rem;
   text-decoration: none;
   transition: 0.15s ease-in-out;
   width: 11rem;
+  min-width: 280px;
 }
 
 .nav-item:hover, .nav-item-active { 
   color: #cc0052;
   text-decoration: none;
-  border-bottom: 0.2rem solid #cc0052;
+  border-bottom: 0.1rem solid #cc0052;
 }
 
 .nav-title-active {
@@ -121,12 +119,12 @@
 }
  
 .nav-up {
-  top: -5.1rem;
+  top: -8.5rem;
 }
 
 /* Position site content when the header is visible. */
 .wrap {
-  padding-top: 7rem;
+  padding-top: 10.5rem;
 }
 
 
